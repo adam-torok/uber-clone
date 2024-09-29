@@ -4,6 +4,9 @@ import InputField from "@/components/InputField";
 import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
+import CustomButton from "@/components/CustomButton";
+import { Link } from "@react-navigation/native";
+import OAuth from "@/components/Oath";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -11,6 +14,9 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+
+  const onSignupPress = async () => {};
+
   return (
     <ScrollView className="flex-1 bg-white">
       <SafeAreaView className="item-center justify-between bg-white">
@@ -48,28 +54,38 @@ const SignUp = () => {
           <InputField
             label="Email"
             placeholder="Enter Your Email"
-            icon={icons.person}
-            value={form.name}
+            icon={icons.email}
+            value={form.email}
             onChangeText={(value) =>
               setForm({
                 ...form,
-                name: value,
+                email: value,
               })
             }
           />
 
           <InputField
-            label="Name"
-            placeholder="Enter Your Name"
-            icon={icons.person}
+            label="Password"
+            placeholder="Enter Your Password"
+            icon={icons.lock}
             value={form.name}
+            secureTextEntry={true}
             onChangeText={(value) =>
               setForm({
                 ...form,
-                name: value,
+                password: value,
               })
             }
           />
+
+          <CustomButton
+            title="Sign Up"
+            onPress={onSignupPress}
+            className="mt-6"
+          />
+
+          <OAuth />
+
         </View>
       </View>
     </ScrollView>

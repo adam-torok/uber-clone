@@ -27,17 +27,15 @@ const InputField = ({
         <Text className={`text-lg font-JakartaSemiBold mb-3 ${labelStyle}`}>
           {label}
         </Text>
-        <View
-          className={`flex flex-row justify-start items-center relative bg-neutral-100 rouded-full border border-neutral-100 focus:border-primary-500 ${containerStyle}`}
-        >
+        <View className={`flex flex-row justify-start items-center relative bg-neutral-100 rouded-full border border-neutral-100 focus:border-primary-500 ${containerStyle}`}>
           {icon && (
-            <Image src={icon} className={`w-6 h-6 ml-4 ${iconStyle}`}></Image>
+            <Image source={icon} className={`w-6 h-6 ml-4 ${iconStyle}`}></Image>
           )}
           <TextInput
             secureTextEntry={secureTextEntry}
+            placeholder="Yooo"
             className={`rounded-full p-4 font-JakartaSemiBold text-[15px] flex-1 ${inputStyle} text-left`}
-            {...props}
-          ></TextInput>
+            {...props}></TextInput>
         </View>
       </View>
     </TouchableWithoutFeedback>
