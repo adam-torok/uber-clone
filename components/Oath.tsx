@@ -15,7 +15,7 @@ const OAuth = () => {
 
       <CustomButton
         title="Log In With Google"
-        className="mt-10 w-full shadow-none"
+        className="mt-5 w-full shadow-none"
         bgVariant="outline"
         textVariant="primary"
         onPress={handleGoogleSignIn}
