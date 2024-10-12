@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Link, router } from "expo-router";
 import CustomButton from "@/components/CustomButton";
 import OAuth from "@/components/Oath";
+import { useSignUp } from "@clerk/clerk-expo";
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -66,7 +67,7 @@ const SignIn = () => {
             href="/sign-up"
             className="text-lg text-center text-general-200 mt-10"
           >
-            Don't have an account? {" "}
+            Don't have an account?{" "}
             <Text className="text-primary-500">Sign up</Text>
           </Link>
         </View>
